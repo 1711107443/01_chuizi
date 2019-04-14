@@ -1,0 +1,77 @@
+/* CSS Document */
+*{margin:0; padding:0; font-size:14px; color:#323232; list-style:none; font-family:"\5FAE\8F6F\96C5\9ED1";}
+body{ background:url(../img/bj.png); width:100%;}
+#wrap{width:1400px; margin:0 auto;}
+
+.aboutbox{ width:1400px; margin:10px auto;}
+.aboutleft{ width:205px; float:left;  }
+.aboutright{ width:1150px; float:right; margin-top:10px;}
+
+.lanrenzhijia{ width:100%; height:auto; margin:0px auto; background:#fff; position:relative;  border-radius:5px; margin-top:48px;}
+.lanrenzhijia li{ z-index:2; position:relative; text-align:center; width:100%;  margin:0px auto;}
+.lanrenzhijia li a{ color:#666; height:40px; line-height:40px; border-bottom:1px solid #F8F8F8; display:block; text-align:center; text-decoration:none;  width:100%;  margin:0px auto;}
+.lanrenzhijia li:hover a{ color:#a56100; text-decoration:none;}
+.lanrenzhijia li.on a{color:#a56100; }
+.lanrenzhijia .hover{ width:100%; height:40px; position:absolute; left:-5px; background:#F8F8F8; border-left:5px solid #a56100;}
+
+.about-six{width:100%; float:left; border:#ccc 1px dashed;  background:#fff; margin-top:50px;}
+.aboutleft-nav{background-image:url(../img/nav4.png); width:100%; height:48px; float:left;}
+.aboutleft-nav p{color:#fff; line-height:48px; margin-left:50px; font-size:16px; float:left;}
+.abouttitle{ width:100%; height:30px;}
+.title-pic{ width:30px; float:left; margin-top:3px;}
+.title-text{ font-size:14px; color:#a66100;}
+.title-text span{ color:#a66100;}
+
+.xiann{width:100%; height:1px; background:#ae7000; margin:0px auto;}
+.xianx{width:90%; height:1px; background:#ae7000; margin:0px auto;}
+
+.abouttext{ width:100%; margin:10px auto; border:#f0f0f4 1px solid; background:#fff; border-radius:5px; height:auto; padding:20px 0;}
+.abouttext p{ width:90%; margin:10px auto; line-height:25px; text-indent:2em;}
+.abouttext strong{ color:#a66100; font-size:18px;}
+.abouttext-img{width:90%; margin:10px auto; text-align:center;}
+
+.news_list_b {background:#fff; width:90%; margin:0px auto;}
+.news_list_b li {list-style-type:none; padding-left:10px; margin:8px; border-bottom:1px dotted #CCC; height:25px; line-height:25px;}
+.news_list_b span {float:right; color:#999; font-size:12px; padding-right:10px;}
+.news_list_b a:link, .news_list a:visited {text-decoration: none; color: #000;}
+.news-pic{ float:left; width:40%; margin:10px;}
+.news-text{ float:right; width:47%; font-size:14px; text-align:left; margin:10px; text-indent:2em; margin-left:10px;}
+
+.page-normal{
+	margin-top:10px;
+	float:right;
+	color:#666;
+	text-align:center;
+	font-size:0;
+}
+.page-normal a,.page-normal .page-current,.page-normal .page-prev{
+	padding:3px 5px;
+	font-size:12px;
+	margin-left:10px;
+}
+.page-normal a{
+	border:1px solid #999;
+	color:#666;
+	text-decoration:none;
+}
+.page-normal a:hover{
+	border:1px solid #ae7000;
+	background:#ae7000;
+	color:#fff;
+}
+
+.page-normal .page-current{
+	border:1px solid #ae7000;
+	color:#fff;
+	background:#ae7000;
+}
+.page-normal .page-prev{
+	border:1px solid #ae7000;
+	color:#ae7000;
+}
+
+.picmain{  width:90%; margin:0px auto; }
+.picmain_up{ width:100%; height:200px; margin:0px auto; padding-bottom:15px;}
+.picmain_down{ width:100%; height:200px; margin:0px auto; padding-bottom:15px;}
+.picmain_pic_left{ width:23%; margin:15px auto; float:left;  text-align:center;}
+.picmain_pic{ width:23%; margin:15px auto; float:left;  text-align:center; margin-left:15px; }

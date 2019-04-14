@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海洋茶文化城</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/about.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="wrap"><!--整体-->
+	<div><img src="img/nav.png" width="100%"/></div>
+    <div id="nav-nav"><!--导航开始-->
+       <ul id="nav">
+            <li><a href="index.html">网站首页</a></li>
+            <img src="img/2.png">
+            <li><a href="about.html">走进江山</a></li>
+            <img src="img/2.png">
+            <li><a href="#">风景景观</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">江山新闻</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">舌尖上的江山</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">联系我们</a></li>
+        </ul>
+    </div><!--导航结束-->
+	<div><img src="img/banner.png" width="100%" /></div>
+    <div style=" clear:both;"></div>
+    <div class="xian"></div>
+
+    <div class="aboutbox">
+    	<div class="aboutleft">
+        	<div class="aboutleft-nav">
+                <p>景区相册</p>
+            </div>
+            <div class="lanrenzhijia">
+                <ul>
+                    <li class="on"><a href='#'>景点1</a></li>
+                    <li class="on"><a href='#'>景点2</a></li>
+                    <li class="on"><a href='#'>景点3</a></li>
+                </ul>
+            <div class="hover"></div>
+        </div>
+            <div class="about-six">
+                <div class="six-1">联系我们<br/><span>Contact us </span></div>
+                <div class="six-2"><img src="img/yuyue.png" width="142"/></div>
+                <div class="six-3"><input type="button" value="联系我们" class="six-button"></div>
+                <div class="six-4"><img src="img/dianhua.png" width="156"/></div></div>
+        	</div>
+            
+    	<div class="aboutright">
+        <div class="abouttitle">
+        	<div class="title-pic"><img src="img/icon1.png" width="16"/></div>
+        	<div class="title-text"><a href="index.html">首 页</a> |  <span>楼盘相册</span> </div>
+        </div>
+        <div class="xiann"></div>    
+        <div class="abouttext">
+        	<p><strong>景点</strong></p>
+            
+            <div class="picmain">
+                <div class="picmain_up">
+                    <div class="picmain_pic"><img src="img/1.jpg" width="100%"/><p>景点1</p></div>
+                    <div class="picmain_pic"><img src="img/2.jpg" width="100%"/><p>景点2</p></div>
+                    <div class="picmain_pic"><img src="img/3.jpg" width="100%"/><p>景点3</p></div>
+                    <div class="picmain_pic"><img src="img/4.jpg" width="100%"/><p>景点4</p></div>            
+                </div>
+                <div class="picmain_down">
+                    <div class="picmain_pic"><img src="img/1.jpg" width="100%"/><p>景点1</p></div>
+                    <div class="picmain_pic"><img src="img/2.jpg" width="100%"/><p>景点2</p></div>
+                    <div class="picmain_pic"><img src="img/3.jpg" width="100%"/><p>景点3</p></div>
+                    <div class="picmain_pic"><img src="img/4.jpg" width="100%"/><p>景点4</p></div>            
+                </div>
+            </div>
+        </div>
+            <div class="page-normal">
+                    <span class="page-prev">&lt;</span>
+                    <span class="page-current">1</span>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">7</a>
+                    ...
+                    <a href="#">199</a>
+                    <a href="#">200</a>
+                    <a href="#" class="page-next">&gt;</a>
+                </div>
+        </div>
+    </div>
+    
+    <div style=" clear:both;"></div>
+    <div class="foot">
+    <div class="ewm"><img src="img/ewm.jpg" width="70"/><br/>扫一扫,更多惊喜</div>
+    <div class="foot-text">
+    	<p>锤子有限公司</p>
+        <p>公司地址：杭科院竹B220 公司电话：13205702538司 联系人：陈小伟女士</p>
+        <p>技术支持：杭科院</p>
+    </div>
+    <div class="footpic"><img src="img/footpic.png" width="170" /></div>
+    </div>
+    
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	var Height = 40; //li的高度
+	var pTop = 0; // .lanrenzhijia 的paddding-top的值
+	$('.lanrenzhijia li').mouseover(function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		var index = $(this).index();
+		var distance = index*(Height+1)+pTop+'px'; //如果你的li有个border-bottom为1px高度的话，这里需要加1
+		$('.lanrenzhijia .hover').stop().animate({top:distance},150); //默认动画时间为150毫秒，懒人们可根据需要修改
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海洋茶文化城</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/lanrenzhijia.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript">
+var Speed_1 = 10; //速度(毫秒)
+var Space_1 = 20; //每次移动(px)
+var PageWidth_1 = 107 * 6; //翻页宽度
+var interval_1 = 5000; //翻页间隔时间
+var fill_1 = 0; //整体移位
+var MoveLock_1 = false;
+var MoveTimeObj_1;
+var MoveWay_1="right";
+var Comp_1 = 0;
+var AutoPlayObj_1=null;
+function GetObj(objName){if(document.getElementById){return eval('document.getElementById("'+objName+'")')}else{return eval('document.all.'+objName)}}
+function AutoPlay_1(){clearInterval(AutoPlayObj_1);AutoPlayObj_1=setInterval('ISL_GoDown_1();ISL_StopDown_1();',interval_1)}
+function ISL_GoUp_1(){if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="left";MoveTimeObj_1=setInterval('ISL_ScrUp_1();',Speed_1);}
+function ISL_StopUp_1(){if(MoveWay_1 == "right"){return};clearInterval(MoveTimeObj_1);if((GetObj('ISL_Cont_1').scrollLeft-fill_1)%PageWidth_1!=0){Comp_1=fill_1-(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1);CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrUp_1(){if(GetObj('ISL_Cont_1').scrollLeft<=0){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft+GetObj('List1_1').offsetWidth}
+GetObj('ISL_Cont_1').scrollLeft-=Space_1}
+function ISL_GoDown_1(){clearInterval(MoveTimeObj_1);if(MoveLock_1)return;clearInterval(AutoPlayObj_1);MoveLock_1=true;MoveWay_1="right";ISL_ScrDown_1();MoveTimeObj_1=setInterval('ISL_ScrDown_1()',Speed_1)}
+function ISL_StopDown_1(){if(MoveWay_1 == "left"){return};clearInterval(MoveTimeObj_1);if(GetObj('ISL_Cont_1').scrollLeft%PageWidth_1-(fill_1>=0?fill_1:fill_1+1)!=0){Comp_1=PageWidth_1-GetObj('ISL_Cont_1').scrollLeft%PageWidth_1+fill_1;CompScr_1()}else{MoveLock_1=false}
+AutoPlay_1()}
+function ISL_ScrDown_1(){if(GetObj('ISL_Cont_1').scrollLeft>=GetObj('List1_1').scrollWidth){GetObj('ISL_Cont_1').scrollLeft=GetObj('ISL_Cont_1').scrollLeft-GetObj('List1_1').scrollWidth}
+GetObj('ISL_Cont_1').scrollLeft+=Space_1}
+function CompScr_1(){if(Comp_1==0){MoveLock_1=false;return}
+var num,TempSpeed=Speed_1,TempSpace=Space_1;if(Math.abs(Comp_1)<PageWidth_1/2){TempSpace=Math.round(Math.abs(Comp_1/Space_1));if(TempSpace<1){TempSpace=1}}
+if(Comp_1<0){if(Comp_1<-TempSpace){Comp_1+=TempSpace;num=TempSpace}else{num=-Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft-=num;setTimeout('CompScr_1()',TempSpeed)}else{if(Comp_1>TempSpace){Comp_1-=TempSpace;num=TempSpace}else{num=Comp_1;Comp_1=0}
+GetObj('ISL_Cont_1').scrollLeft+=num;setTimeout('CompScr_1()',TempSpeed)}}
+function picrun_ini(){
+GetObj("List2_1").innerHTML=GetObj("List1_1").innerHTML;
+GetObj('ISL_Cont_1').scrollLeft=fill_1>=0?fill_1:GetObj('List1_1').scrollWidth-Math.abs(fill_1);
+GetObj("ISL_Cont_1").onmouseover=function(){clearInterval(AutoPlayObj_1)}
+GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
+AutoPlay_1();
+}
+</script>
+</head>
+
+<body>
+<div id="wrap"><!--整体-->
+	<div><img src="img/nav.png" width="100%"/></div>
+    <div id="nav-nav"><!--导航开始-->
+        <ul id="nav">
+            <li><a href="index.html">网站首页</a></li>
+            <img src="img/2.png">
+            <li><a href="about.html">走进江山</a></li>
+            <img src="img/2.png">
+            <li><a href="pic.html">风景景观</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">江山新闻</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">舌尖上的江山</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">联系我们</a></li>
+        </ul>
+    </div><!--导航结束-->
+	<div><img src="img/banner.png" width="100%" /></div>
+    
+    <div class="index-box"><!--主要内容开始（幻灯片公司新闻主推户型）-->
+    	<div class="box-one">
+        	<!-- 轮播广告 -->
+            <div id="banner_tabs" class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <a title="" target="_blank" href="#">
+                            <img width="100%" alt="幻灯片1" style="background: url(img/1.jpg) no-repeat center;" src="img/alpha.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="" href="#">
+                            <img width="100%" alt="幻灯片2" style="background: url(img/2.jpg) no-repeat center;" src="img/alpha.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a title="" href="#">
+                            <img width="100%" alt="幻灯片3" style="background: url(img/3.jpg) no-repeat center;" src="img/alpha.png">
+                        </a>
+                    </li>
+                </ul>
+                <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+                    <li><a><strong>1</strong></a></li>
+                    <li><a><strong>2</strong></a></li>
+                    <li><a><strong>3</strong></a></li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="box-two">
+        	<div class="box-twonav">
+                <p>江山时讯</p>
+              <div class="box-b"><a href="news.html"><img src="img/more.png" width="81"/></a></div>
+            </div>
+            <div class="news_list">
+                <ul>
+                  <li><span>2019-02-01</span> <a href="about.html" title="过年前夕的耕读灯节 ">过年前夕的耕读灯节 </a></li>
+                  <li><span>2019-02-01</span><a href="about.html" title="衢州每周一景点对外免费开放">衢州每周一景点对外免费开放 </a></li>
+                  <li><span>2019-02-01</span><a href="about.html" title="廿八都古镇传统美食节">廿八都古镇传统美食节</a></li>
+                  <li><span>2019-02-01</span><a href="about.html" title="衢州每周一景点对外免费开放">衢州每周一景点对外免费开放 </a></li>
+                  <li><span>2019-02-01</span><a href="about.html" title="衢州每周一景点对外免费开放"> 衢州每周一景点对外免费开放</a></li>
+                </ul>
+      		</div>
+        </div>
+        
+    	<div class="box-three">
+        	<div class="box-twonav">
+                <p>戴笠故居</p>
+                <div class="box-b"><a href="news.html"><img src="img/more.png" width="81"/></a></div>
+            </div>
+            <a href="about.html"><div class="news_list">
+            	<div class="news-pic"><img src="img/pic.png" width="193"/></div>
+                <div class="news-text">戴笠故居位于东四北大街西侧，东邻小细管胡同，西近南剪子巷，北靠魏家胡同此宅院是一组清代晚期建筑，坐北朝南，前后三进院落。现存建筑形制为，广亮大门一间，硬山顶合瓦过垄脊屋面，檐下施以苏式彩画，檐柱带雀替。大门两侧有八字墙，门内有照壁。</div>
+      		</div></a>
+        </div>
+    </div><!--主要内容结束-->
+    <div style=" clear:both;"></div>
+    <div class="xian"></div>
+    
+    <div class="index-box"><!--主要内容开始（周边配套活动资讯预约看房）-->
+    	<div class="box-four">
+        	<div class="box-fournav">
+                <p>周边景区</p>
+                <div class="box-b"><a href="news.html"><img src="img/more.png" width="81"/></a></div>
+        	</div>
+            <div class="one">
+            <div class="one-1">
+                <div class="one-0">
+                	<div class="one-1-1"><img src="img/1.jpg" width="100%"/></div>
+                    <div class="one-1-2"><strong>廿八都古镇</strong><br />
+戴笠故居位于东四北大街西侧，东邻小细管胡同，西近南剪子巷落。<a href="about.html"><span>详细>></span></a></div>
+                </div>
+                <div style=" clear:both;"></div>
+                <div class="one-0">
+                	<div class="one-1-1"><img src="img/2.jpg" width="100%"/></div>
+                    <div class="one-1-2"><strong>仙霞关</strong><br />
+戴笠故居位于东四北大街西侧，东邻小细管胡同，西近南剪子巷，北靠魏家院是清代晚期建筑落。<a href="about.html"><span>详细>></span></a></div>
+                </div>
+            </div>
+            <div class="one-2">
+                <div class="one-0">
+                        <div class="one-1-1"><img src="img/3.jpg" width="100%"/></div>
+                        <div class="one-1-2"><strong>江郎山j</strong><br />
+    戴笠故居位于东四北大街西侧，东邻小细管胡同，西近南剪子巷，北靠魏家院是清代晚期建筑落。<a href="about.html"><span>详细>></span></a></div>
+                    </div>
+                <div style=" clear:both;"></div>
+                <div class="one-0">
+                	<div class="one-1-1"><img src="img/p4.png" width="100%"/></div>
+                    <div class="one-1-2"><strong>戴笠故居</strong><br />
+戴笠故居位于东四北大街西侧，东邻小细管胡同，西近南剪子巷，北靠魏家院是清代晚期建筑落。<a href="about.html"><span>详细>></span></a></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <div class="box-five">
+        	<div class="box-twonav">
+                <p>活动资讯</p>
+                <div class="box-b"><a href="news.html"><img src="img/more.png" width="81"/></a></div>
+            </div>
+            <div class="news_list">
+              <ul>
+                  <li><span>2019-02-01</span> <a href="about.html" title="过年前夕的耕读灯节 ">过年前夕的耕读灯节 </a></li>
+                  <li><span>2019-02-01</span><a href="about.html" title="衢州每周一景点对外免费开放">衢州每周一景点对外免费开放 </a></li>
+                  <li><span>2019-02-01</span><a href="about.html" title="廿八都古镇传统美食节">廿八都古镇传统美食节</a></li>
+                  <li><span>2019-02-01</span><a href="about.html" title="衢州每周一景点对外免费开放">衢州每周一景点对外免费开放 </a></li>
+                  <li><span>2019-02-01</span><a href="about.html" title="衢州每周一景点对外免费开放"> 衢州每周一景点对外免费开放</a></li>
+                </ul>
+      		</div>
+        </div>
+        
+        <div class="box-six">
+        	<div class="six-1">联系我们<br/><span>Contact us </span></div>
+            <div class="six-2"><img src="img/yuyue.png" width="142"/></div>
+            <div class="six-3"><input type="button" value="联系我们" class="six-button"></div>
+            <div class="six-4"><img src="img/dianhua.png" width="156"/></div></div>
+        </div>
+       
+    </div><!--主要内容结束-->
+    <div style="clear:both;"></div>
+    <div class="xian"></div>
+    
+    <div class="lan">
+    	<div class="lan-1"><img src="img/icon1.png" width="16"/></div>
+        <div class="lan-2">景区相册</div>
+        <div class="lan-3"><img src="img/lou.png" width="1019"/></div>
+    </div>
+    <div><!--楼盘相册开始-->
+        <center>
+    <div class="blk_18"> <a class="LeftBotton" onmousedown="ISL_GoUp_1()" onmouseup="ISL_StopUp_1()" onmouseout="ISL_StopUp_1()" href="javascript:void(0);" target="_self"></a>
+      <div class="pcont" id="ISL_Cont_1">
+        <div class="ScrCont">
+          <div id="List1_1">
+            <!-- piclist begin -->
+            <a class="pl" href="picpic3.html"><img src="img/1.jpg" alt="图片" width="100%"/>图片一</a>
+            <a class="pl" href="picpic1.html"><img src="img/2.jpg" alt="图片" width="100%"/>图片二</a>
+            <a class="pl" href="picpic.html"><img src="img/3.jpg" alt="图片" width="100%"/>图片三</a>
+            <a class="pl" href="picpic.html"><img src="img/2.jpg" alt="图片" width="100%"/>图片四</a>
+            <a class="pl" href="picpic.html"><img src="img/1.jpg" alt="图片" width="100%"/>图片五</a>
+            <a class="pl" href="picpic3.html"><img src="img/2.jpg" alt="图片" width="100%"/>图片六</a>
+            <a class="pl" href="picpic1.html"><img src="img/3.jpg" alt="图片" width="100%"/>图片七</a>
+            <a class="pl" href="picpic.html"><img src="img/2.jpg" alt="图片" width="100%"/>图片八</a>
+            <a class="pl" href="picpic.html"><img src="img/1.jpg" alt="图片" width="100%"/>图片九</a>
+            <!-- piclist end -->
+          </div>
+          <div id="List2_1"></div>
+        </div>
+      </div>
+      <a class="RightBotton" onmousedown="ISL_GoDown_1()" onmouseup="ISL_StopDown_1()" onmouseout="ISL_StopDown_1()" href="javascript:void(0);" target="_self"></a> </div>
+    <div class="c"></div>
+    <script type="text/javascript">
+            <!--
+            picrun_ini()
+            //-->
+            </script>
+            </center>
+	</div><!--楼盘相册结束-->
+    
+    <div class="foot">
+    <div class="ewm"><img src="img/ewm.jpg" width="70"/><br/>扫一扫,更多惊喜</div>
+    <div class="foot-text">
+    	<p>锤子有限公司</p>
+        <p>公司地址：杭科院竹B220 公司电话：13205702538司 联系人：陈小伟女士</p>
+        <p>技术支持：杭科院</p>
+    </div>
+    <div class="footpic"><img src="img/footpic.png" width="170" /></div>
+    </div>
+    
+</div>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/slider.js"></script>
+<script type="text/javascript">
+$(function() {
+	var bannerSlider = new Slider($('#banner_tabs'), {
+		time: 5000,
+		delay: 400,
+		event: 'hover',
+		auto: true,
+		mode: 'fade',
+		controller: $('#bannerCtrl'),
+		activeControllerCls: 'active'
+	});
+	$('#banner_tabs .flex-prev').click(function() {
+		bannerSlider.prev()
+	});
+	$('#banner_tabs .flex-next').click(function() {
+		bannerSlider.next()
+	});
+})
+</script>
+</body>
+</html>

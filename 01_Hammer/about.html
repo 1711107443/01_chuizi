@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>海洋茶文化城</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+<link href="css/about.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="wrap"><!--整体-->
+	<div><img src="img/nav.png" width="100%"/></div>
+    <div id="nav-nav"><!--导航开始-->
+        <ul id="nav">
+            <li><a href="index.html">网站首页</a></li>
+            <img src="img/2.png">
+            <li><a href="about.html">走进江山</a></li>
+            <img src="img/2.png">
+            <li><a href="#">风景景观</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">江山新闻</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">舌尖上的江山</a></li>
+            <img src="img/2.png">
+            <li><a href="news.html">联系我们</a></li>
+        </ul>
+    </div><!--导航结束-->
+	<div><img src="img/banner.png" width="100%" /></div>
+    <div style=" clear:both;"></div>
+    <div class="xian"></div>
+
+    <div class="aboutbox">
+    	<div class="aboutleft">
+        	<div class="aboutleft-nav">
+                <p>走进江山</p>
+            </div>
+            <div class="lanrenzhijia">
+                <ul>
+                    <li class="on"><a href='#'>关于我们</a></li>
+                    <li class="on"><a href='#'>江山文化</a></li>
+                    <li class="on"><a href='#'>江山荣誉</a></li>
+                    <li class="on"><a href='#'>江山美景</a></li>
+                </ul>
+            <div class="hover"></div>
+        </div>
+            <div class="about-six">
+                <div class="six-1">联系我们<br/><span>Contact us </span></div>
+                <div class="six-2"><img src="img/yuyue.png" width="142"/></div>
+                <div class="six-3"><input type="button" value="联系我们" class="six-button"></div>
+                <div class="six-4"><img src="img/dianhua.png" width="156"/></div></div>
+        	</div>
+            
+    	<div class="aboutright">
+        <div class="abouttitle">
+        	<div class="title-pic"><img src="img/icon1.png" width="16"/></div>
+        	<div class="title-text">首 页 |  走进江山 |  <span>江山文化</span></div>
+        </div>
+        <div class="xiann"></div>    
+        <div class="abouttext">
+        	<p><strong>江山文化</strong></p>
+            <div class="xianx"></div>
+            <p>江山市，浙江省衢州市代管的县级市，位于浙闽赣三省交界处，是浙江省的西南部门户和钱塘江源头之一。1987年撤县设市。2017年，区域面积2019平方公里，人口61.4万，实现地区生产总值301.64亿元，城乡居民人均可支配收入分别为41545元和21932元，增长9.1%和9.9%。浙赣铁路复线和黄衢南高速公路贯穿全境[1]。</p><br/>
+	<p>主要景点有江郎山景区、清漾景区、廿八都古镇、浮盖堆石洞群、和睦彩陶文化村、仙霞岭景区、戴笠秘宅、石鼓峡谷、月亮湖景区、市区景观等。</p><br/>
+	<p>江山先后被命名为"中国猕猴桃之乡"、"中国白鹅之乡"、"中国白菇之乡"、"中国蜜蜂之乡"、"中国水泥之乡"、"中国木门之都"、"江南毛氏发祥地"、"毛泽东祖居地"、首个"中国村歌之乡"、"中国幸福乡村"。[2]</p>
+    <p>2017年6月，江山市被命名国家卫生城市。2018年10月，获得"2018年国家森林城市"荣誉称号。[3]2018年11月，入选2018全国"幸福百县榜"，[4]入选中国县级市全面小康指数前100名。</p>
+    <div class="abouttext-img"><img src="img/3.jpg" width="50%"/></div>
+        </div>
+        </div>
+    </div>
+    
+    <div style=" clear:both;"></div>
+    <div class="foot">
+    <div class="ewm"><img src="img/ewm.jpg" width="70"/><br/>扫一扫,更多惊喜</div>
+    <div class="foot-text">
+    	<p>锤子有限公司</p>
+        <p>公司地址：杭科院竹B220 公司电话：13205702538司 联系人：陈小伟女士</p>
+        <p>技术支持：杭科院</p>
+    </div>
+    <div class="footpic"><img src="img/footpic.png" width="170" /></div>
+    </div>
+    
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script>
+$(function(){
+	var Height = 40; //li的高度
+	var pTop = 0; // .lanrenzhijia 的paddding-top的值
+	$('.lanrenzhijia li').mouseover(function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		var index = $(this).index();
+		var distance = index*(Height+1)+pTop+'px'; //如果你的li有个border-bottom为1px高度的话，这里需要加1
+		$('.lanrenzhijia .hover').stop().animate({top:distance},150); //默认动画时间为150毫秒，懒人们可根据需要修改
+	});
+});
+</script>
+</body>
+</html>
